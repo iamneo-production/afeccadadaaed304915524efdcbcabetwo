@@ -86,8 +86,12 @@
                     [0,4,8],[2,4,6]
             ];
                 return winPatterns.some(pattern=>{
-                    
-                })
+                    const [a,b,c]=pattern;
+                    return cells[a].textContent && cells[a].textContent===cells[b].textContent&&cells[a].textContent===cells[c].textContent;
+                });
+            }
+            function isBoardFull(){
+                return[...cells].every(cell=>cell.textContent!='');
             }
         </script>
     </body>
