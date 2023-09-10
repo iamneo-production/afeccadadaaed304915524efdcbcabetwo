@@ -57,7 +57,20 @@
         <div class="message" id="message"></div>
         <script>
             const board=document.getElementById('board');
-            const cells=document.querySelectorAll
+            const cells=document.querySelectorAll('[data-cell]');
+            let currentPlayer='X';
+            let isGameActive=true;
+            board.addEventListener('click',(e)=>{
+                const cell=e.target;
+                if(!cell.classList.contains('cell')||!isGameActive||cell.textContent !==''){
+                    return;
+                }
+                cell.textContent=currentPlayer;
+                cell.classList.add(currentPlayer);
+                if(checkWin()){
+                    message.textContent='${currentPlayer} wins';
+                }
+            })
         </script>
     </body>
 </html>
