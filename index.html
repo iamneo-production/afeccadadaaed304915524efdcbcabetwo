@@ -29,6 +29,35 @@
             .cell:hover{
                 background-color: #f0f0f0;
             }
+            .cell.x{
+                color:#ff0000;
+            }
+            .cell.o{
+                color:#0000ff;
+            }
+            .message{
+                font-size:24px;
+                margin-top:20px;
+            }
         </style>
     </head>
+    <body>
+        <h1>Tic Tac Toe</h1>
+        <div class="board" id="board">
+            <div class="cell" data-cell></div>
+            <div class="cell" data-cell></div>
+            <div class="cell" data-cell></div>
+            <div class="cell" data-cell></div>
+            <div class="cell" data-cell></div>
+            <div class="cell" data-cell></div>
+            <div class="cell" data-cell></div>
+            <div class="cell" data-cell></div>
+            <div class="cell" data-cell></div>
+        </div>
+        <div class="message" id="message"></div>
+        <script>
+            const board=document.getElementById('board');
+            const cells=document.querySelectorAll
+        </script>
+    </body>
 </html>
